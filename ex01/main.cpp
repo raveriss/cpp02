@@ -6,13 +6,16 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:42:50 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/14 18:30:28 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/03/30 18:04:26 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
 
+/**
+ * @brief Méthode pour afficher un message d'avertissement
+ */
 int main( void ) {
     Fixed       a;
     Fixed const b( 10 );

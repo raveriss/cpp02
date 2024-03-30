@@ -6,13 +6,16 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:11:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/14 15:25:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/03/28 16:21:55 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
+/**
+ * @brief Classe représentant un nombre à virgule fixe
+ */
 class Fixed {
 private:
     int value;

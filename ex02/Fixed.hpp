@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:41:54 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/14 17:47:51 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/03/30 18:10:02 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <cmath>
 #include <iostream>
 
+/**
+ * @brief Constructeur par défaut de la classe Fixed
+ */
 class Fixed {
 private:
     int                 _value;
