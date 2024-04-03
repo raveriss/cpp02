@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:42:50 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/14 18:58:18 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:06:52 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,18 @@
 #include "Point.hpp"
 #include <iostream>
 
-// Prototype de la fonction bsp (si elle n'est pas déjà déclarée dans un en-tête)
+/**
+ * @brief Test appartenance point triangle
+ * @param a, b, c: sommets triangle
+ * @param point: point tester
+ * @return Booléen appartenance
+ */
 bool bsp(Point const a, Point const b, Point const c, Point const point);
+
+/**
+ * @brief Main test fonction bsp
+ * @details Instanciation points, tests appartenance triangle
+ */
 
 int main(void) {
     Point a(0.0f, 0.0f);

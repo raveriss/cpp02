@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:41:54 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/14 17:47:51 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:16:03 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 #include <cmath>
 #include <iostream>
 
+/**
+ * @brief Classe représentant un nombre à virgule fixe
+ * @details Gestion précision fixe, conversions, opérations arithmétiques
+ * @method Constructeur, Destructeur, Copy, Assignment, Comparaisons,
+ *         Arithmétique, Incrémentation, Décrémentation, Min, Max, Conversion
+ * @member _value: valeur fixe, _fractionalBits: bits fractionnaires
+ */
 class Fixed {
 private:
     int                 _value;

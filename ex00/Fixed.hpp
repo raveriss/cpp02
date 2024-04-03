@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:11:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/28 16:21:55 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:24:29 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
  */
 class Fixed {
 private:
-    int value;
-    static const int fractionalBits = 8;
+    int _value;
+    static const int _fractionalBits = 8;
 
 public:
     Fixed();

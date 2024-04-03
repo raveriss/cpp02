@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:24:22 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/28 16:21:07 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:24:54 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /**
  * @brief Constructeur par défaut de la classe Fixed
  */
-Fixed::Fixed() : value(0) {
+Fixed::Fixed() : _value(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
@@ -24,7 +24,7 @@ Fixed::Fixed() : value(0) {
  * @brief Constructeur de copie de la classe Fixed
  * @param other: instance de Fixed à copier
  */
-Fixed::Fixed(const Fixed& other) : value(other.value) { // Correction ici
+Fixed::Fixed(const Fixed& other) : _value(other._value) { // Correction ici
     std::cout << "Copy constructor called" << std::endl;
     *this = other;
 }
@@ -37,7 +37,7 @@ Fixed::Fixed(const Fixed& other) : value(other.value) { // Correction ici
 Fixed& Fixed::operator=(const Fixed& other) {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) {
-        this->value = other.getRawBits();
+        this->_value = other.getRawBits();
     }
     return *this;
 }
@@ -55,7 +55,7 @@ Fixed::~Fixed() {
  */
 int Fixed::getRawBits(void) const {
     std::cout << "getRawBits member function called" << std::endl;
-    return this->value;
+    return this->_value;
 }
 
 /**
@@ -63,7 +63,7 @@ int Fixed::getRawBits(void) const {
  * @param raw: nouvelle valeur brute des bits
  */
 void Fixed::setRawBits(int const raw) {
-    this->value = raw;
+    this->_value = raw;
 }
 
 
