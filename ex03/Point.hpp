@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:51:47 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/03 16:28:12 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:34:49 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ private:
 
 public:
     Point();
-    Point(float const x, float const y);
+    Point(const float x, float const y);
     Point(Point const &src);
     Point& operator=(Point const &rhs); // Doit être définie mais ne fera rien car x et y sont const.
     ~Point();
