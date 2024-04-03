@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:42:50 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/30 18:04:26 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 23:02:56 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 /**
  * @brief Méthode pour afficher un message d'avertissement
  */
-int main( void ) {
+int main( void )
+{
     Fixed       a;
     Fixed const b( 10 );
     Fixed const c( 42.42f );

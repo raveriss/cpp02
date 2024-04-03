@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:42:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/03 16:27:14 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/03 23:08:26 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 /**
  * @brief Constructeur par défaut
  */
-Fixed::Fixed() : _value(0) {
+Fixed::Fixed() : _value(0)
+{
     std::cout << "Default constructor called" << std::endl;
 }
 
@@ -24,7 +25,8 @@ Fixed::Fixed() : _value(0) {
  * @brief Constructeur à partir d'un entier
  * @param integer: valeur entière à convertir
  */
-Fixed::Fixed(const int integer) : _value(integer << _fractionalBits) {
+Fixed::Fixed(const int integer) : _value(integer << _fractionalBits)
+{
     std::cout << "Int constructor called" << std::endl;
 }
 
@@ -33,7 +35,8 @@ Fixed::Fixed(const int integer) : _value(integer << _fractionalBits) {
  * @param floatingPoint: valeur à virgule flottante à convertir
  */
 Fixed::Fixed(const float floatingPoint)
-    : _value(roundf(floatingPoint * (1 << _fractionalBits))) {
+    : _value(roundf(floatingPoint * (1 << _fractionalBits)))
+{
     std::cout << "Float constructor called" << std::endl;
 }
 
@@ -41,7 +44,8 @@ Fixed::Fixed(const float floatingPoint)
  * @brief Constructeur de copie
  * @param other: instance à copier
  */
-Fixed::Fixed(const Fixed& other) : _value(other._value) {
+Fixed::Fixed(const Fixed& other) : _value(other._value)
+{
     std::cout << "Copy constructor called" << std::endl;
     std::cout << "Copy assignment operator called" << std::endl;
 }
@@ -49,7 +53,8 @@ Fixed::Fixed(const Fixed& other) : _value(other._value) {
 /**
  * @brief Destructeur
  */
-Fixed::~Fixed() {
+Fixed::~Fixed()
+{
     std::cout << "Destructor called" << std::endl;
 }
 
@@ -58,11 +63,11 @@ Fixed::~Fixed() {
  * @param other: instance à affecter
  * @return référence sur l'instance courante
  */
-Fixed& Fixed::operator=(const Fixed& other) {
+Fixed& Fixed::operator=(const Fixed& other)
+{
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &other) {
+    if (this != &other)
         this->_value = other.getRawBits();
-    }
     return *this;
 }
 
@@ -70,7 +75,8 @@ Fixed& Fixed::operator=(const Fixed& other) {
  * @brief Récupère la valeur brute des bits
  * @return valeur brute des bits
  */
-int Fixed::getRawBits(void) const {
+int Fixed::getRawBits(void) const
+{
     return this->_value;
 }
 
@@ -78,7 +84,8 @@ int Fixed::getRawBits(void) const {
  * @brief Définit la valeur brute des bits
  * @param raw: nouvelle valeur brute des bits
  */
-void Fixed::setRawBits(int const raw) {
+void Fixed::setRawBits(int const raw)
+{
     this->_value = raw;
 }
 
@@ -86,7 +93,8 @@ void Fixed::setRawBits(int const raw) {
  * @brief Convertit le nombre à virgule fixe en nombre à virgule flottante
  * @return valeur du nombre à virgule fixe en nombre à virgule flottante
  */
-float Fixed::toFloat(void) const {
+float Fixed::toFloat(void) const
+{
     return static_cast<float>(this->_value) / (1 << _fractionalBits);
 }
 
@@ -94,7 +102,8 @@ float Fixed::toFloat(void) const {
  * @brief Convertit le nombre à virgule fixe en entier
  * @return valeur du nombre à virgule fixe en entier
  */
-int Fixed::toInt(void) const {
+int Fixed::toInt(void) const
+{
     return this->_value >> _fractionalBits;
 }
 
@@ -104,7 +113,8 @@ int Fixed::toInt(void) const {
  * @param fixed: instance de Fixed à afficher
  * @return flux de sortie modifié
  */
-std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
+{
     os << fixed.toFloat();
     return os;
 }
