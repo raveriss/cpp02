@@ -6,27 +6,19 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:42:50 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/04 13:56:24 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:02:22 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include "Point.hpp"
+#include "bsp.hpp"
 #include <iostream>
-
-/**
- * @brief Test appartenance point triangle
- * @param a, b, c: sommets triangle
- * @param point: point tester
- * @return Booléen appartenance
- */
-bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 /**
  * @brief Main test fonction bsp
  * @details Instanciation points, tests appartenance triangle
  */
-
 int main(void)
 {
 	Point a(0.0f, 0.0f);

@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   bsp.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 15:11:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/04 14:48:00 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/04 14:57:35 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/04 15:01:58 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#ifndef BSP_HPP
+#define BSP_HPP
+
+#include "Point.hpp"
 
 /**
- * @brief Classe représentant un nombre à virgule fixe
+ * @brief Test appartenance point triangle
+ * @param a, b, c: sommets triangle
+ * @param point: point tester
+ * @return Booléen appartenance
  */
-class Fixed {
-private:
-    int _value;
-    static const int _fractionalBits = 8;
-
-public:
-    Fixed();
-    Fixed(const Fixed & other);
-    Fixed & operator=(const Fixed & other);
-    ~Fixed();
-
-    int getRawBits(void) const;
-    void setRawBits(int const raw);
-};
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
-
-

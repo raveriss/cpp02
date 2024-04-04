@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:41:54 by raveriss          #+#    #+#             */
-/*   Updated: 2024/03/30 18:43:08 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/04 14:47:43 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,14 @@ public:
      * @brief Constructeur de copie
      * @param src: Objet à copier
      */
-    Fixed(const Fixed &src);
+    Fixed(const Fixed & src);
 
     /**
      * @brief Opérateur d'affectation
      * @param rhs: Objet à affecter
      * @return Référence sur l'objet courant
      */
-    Fixed& operator=(const Fixed &rhs);
+    Fixed & operator=(const Fixed & rhs);
 
     /**
      * @brief Destructeur
@@ -72,76 +72,76 @@ public:
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator>(const Fixed &rhs) const;
+    bool operator>(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de comparaison inférieur
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator<(const Fixed &rhs) const;
+    bool operator<(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de comparaison supérieur ou égal
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator>=(const Fixed &rhs) const;
+    bool operator>=(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de comparaison inférieur ou égal
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator<=(const Fixed &rhs) const;
+    bool operator<=(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur d'égalité
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator==(const Fixed &rhs) const;
+    bool operator==(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de différence
      * @param rhs: Objet à comparer
      * @return Résultat de la comparaison
      */
-    bool operator!=(const Fixed &rhs) const;
+    bool operator!=(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur d'addition
      * @param rhs: Opérande de droite
      * @return Résultat de l'addition
      */
-    Fixed operator+(const Fixed &rhs) const;
+    Fixed operator+(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de soustraction
      * @param rhs: Opérande de droite
      * @return Résultat de la soustraction
      */
-    Fixed operator-(const Fixed &rhs) const;
+    Fixed operator-(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de multiplication
      * @param rhs: Opérande de droite
      * @return Résultat de la multiplication
      */
-    Fixed operator*(const Fixed &rhs) const;
+    Fixed operator*(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur de division
      * @param rhs: Opérande de droite
      * @return Résultat de la division
      */
-    Fixed operator/(const Fixed &rhs) const;
+    Fixed operator/(const Fixed & rhs) const;
 
     /**
      * @brief Opérateur d'incrémentation préfixe
      * @return Référence sur l'objet courant
      */
-    Fixed& operator++();
+    Fixed & operator++();
 
     /**
      * @brief Opérateur d'incrémentation postfixe
@@ -153,7 +153,7 @@ public:
      * @brief Opérateur de décrémentation préfixe
      * @return Référence sur l'objet courant
      */
-    Fixed& operator--();
+    Fixed & operator--();
 
     /**
      * @brief Opérateur de décrémentation postfixe
@@ -167,7 +167,7 @@ public:
      * @param b: Deuxième nombre
      * @return Référence sur le plus petit nombre
      */
-    static Fixed &min(Fixed &a, Fixed &b);
+    static Fixed & min(Fixed & a, Fixed & b);
 
     /**
      * @brief Minimum de deux nombres fixes constants
@@ -175,7 +175,7 @@ public:
      * @param b: Deuxième nombre
      * @return Référence constante sur le plus petit nombre
      */
-    static const Fixed &min(const Fixed &a, const Fixed &b);
+    static const Fixed & min(const Fixed & a, const Fixed & b);
 
     /**
      * @brief Maximum de deux nombres fixes
@@ -183,7 +183,7 @@ public:
      * @param b: Deuxième nombre
      * @return Référence sur le plus grand nombre
      */
-    static Fixed &max(Fixed &a, Fixed &b);
+    static Fixed & max(Fixed & a, Fixed & b);
 
     /**
      * @brief Maximum de deux nombres fixes constants
@@ -191,7 +191,7 @@ public:
      * @param b: Deuxième nombre
      * @return Référence constante sur le plus grand nombre
      */
-    static const Fixed &max(const Fixed &a, const Fixed &b);
+    static const Fixed & max(const Fixed & a, const Fixed & b);
 
     /**
      * @brief Récupérer la valeur brute du nombre fixe
@@ -225,6 +225,6 @@ public:
  * @param value: Nombre fixe à afficher
  * @return Flux de sortie modifié
  */
-std::ostream &operator<<(std::ostream &out, const Fixed &value);
+std::ostream & operator<<(std::ostream & out, const Fixed & value);
 
 #endif
