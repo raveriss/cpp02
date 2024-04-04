@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:41:54 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/03 22:45:31 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:38:07 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,17 @@ public:
 	Fixed operator*(const Fixed &rhs) const;
 	Fixed operator/(const Fixed &rhs) const;
 
-	Fixed& operator++();    // Pré-incrémentation
-	Fixed operator++(int);  // Post-incrémentation
-	Fixed& operator--();    // Pré-décrémentation
-	Fixed operator--(int);  // Post-décrémentation
+	/*  Pré-incrémentation  */
+	Fixed& operator++();
+	Fixed& operator--();
+	
+	/*  Post-incrémentation  */
+	Fixed operator++(int);
+	Fixed operator--(int);
 
 	static Fixed &min(Fixed &a, Fixed &b);
-	static const Fixed &min(const Fixed &a, const Fixed &b);
 	static Fixed &max(Fixed &a, Fixed &b);
+	static const Fixed &min(const Fixed &a, const Fixed &b);
 	static const Fixed &max(const Fixed &a, const Fixed &b);
 
 	int getRawBits(void) const;

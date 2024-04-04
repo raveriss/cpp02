@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:43:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/03 16:25:58 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/04 13:21:29 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,11 @@ public:
 	int toInt(void) const;
 
 	/**
-	 * @brief Opérateur d'insertion pour afficher un nombre à virgule fixe
-	 * @param os: flux de sortie
-	 * @param fixed: instance de Fixed à afficher
-	 * @return flux de sortie modifié
+	 * @brief Insère une représentation en virgule flottante de l'objet Fixed 
+	 * 		  dans le flux de sortie.
+	 * @param os Flux de sortie dans lequel l'objet doit être inséré.
+	 * @param fixed L'objet Fixed à insérer dans le flux.
+	 * @return Référence au flux de sortie, permettant le chaînage des insertions.
 	 */
 	friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
